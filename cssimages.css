@@ -1,0 +1,215 @@
+body,h1,h2,h3,h4,h5,h6{
+  font-family: "Lato", sans-serif;
+}
+body, html {
+height: 100%;
+color: #757575;
+line-height: 1.8;
+}
+body {
+  line-height: 23px;
+  color: #757575;
+  letter-spacing: .3px;
+  font-size: 18px;
+}
+/* Create a Parallax Effect */
+.bgimg-1{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("./images/hotelimage.jpg");
+  min-width: 1000px;
+
+}
+.container{
+  padding-left: 35px;
+  font-family: Cursive;
+  background-position: center;
+  max-width: 1008px;
+  max-height: 1200px;
+}
+.nav-item{
+  width: 0 auto;
+  height: 0 auto;
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+  
+}
+.nav-tabs{
+  background-color: rgb(60, 65, 61);
+}
+.nav-link{
+  color:white;
+  background-color: rgb(60, 65, 61);
+}
+
+.w3-wide {
+  letter-spacing: 10px;
+}
+.w3-hover-opacity {
+  cursor: pointer;
+}
+.w3-top{
+  font-family: "Lato", sans-serif;
+}
+.tag-row span {
+  margin:0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  border-right: 1px solid #CCC;
+  padding-right: 16px;
+
+}
+
+.tag-row a {
+  color: #9C9C9C;
+  font-size:18px;
+  margin: 0 auto;
+}
+.footer-title {
+  font-size:20px;
+  margin: 0 auto;
+}
+
+.footer-address {
+  font-size:20px;
+  margin: 0 auto;
+}
+.icon-row{
+  font-size:20px;
+  margin:0 auto;
+  padding-left: 50px;
+}
+.btn-group {
+  padding-left:20px;
+  margin: 0 auto;
+}
+
+
+.social-group a i {
+  padding: 10px 12px;
+  margin: 0 auto;
+
+  font-weight: 400 !important;
+}
+
+
+
+.social-group .fa:hover {
+  color: white;
+  border-radius: 2px;
+}
+
+
+
+.social-group .fa-facebook {
+  padding: 10px 14px;
+}
+
+.social-group .fa-twitter {
+  padding: 10px 11px;
+}
+
+.social-group [class*="facebook"]:hover {
+  background-color: #3B5998;
+}
+
+.social-group [class*="twitter"]:hover {
+  background-color: #3B8ACA;
+}
+
+.social-group [class*="instagram"]:hover {
+  background-color: rgb(173, 31, 142);
+}
+
+.social-group [class*="youtube"]:hover {
+  background-color: #cc181e;
+}
+
+
+/* 
+==============================
+FOOTER 
+==============================
+*/
+footer {
+  background-color: #F5F5F5;
+  position: relative;
+  z-index: 3;
+  margin-top: 0 !important;
+}
+
+  footer h4, footer h5, footer h6 {
+      margin-top: 0;
+  }
+
+  footer .container {
+      padding: 35px 15px 15px 15px;
+  }
+
+.footer-base hr, .footer-parallax hr {
+  margin-left: 0;
+}
+
+.footer-bg {
+  height: 330px;
+  padding: 15px 0;
+  background-position: center top;
+}
+
+.footer-bg .footer-center {
+  border: none;
+  margin-top: 0;
+}
+
+
+.footer-center {
+  text-align: center;
+}
+
+
+
+
+.footer-center .footer-main {
+  margin: 20px;
+  font-size: 17px;
+}
+
+
+
+.footer-center .footer-title {
+  color: #4C4C4C;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+footer .social-group i {
+  font-weight: 900;
+}
+
+.btn-group.social-group i, .footer-center .footer-title{
+  color: #8B6B43;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1{
+    background-attachment: scroll;
+    min-width: 400px;
+    min-height: 600px;
+  }
+
+  img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+  }
+
+
+}

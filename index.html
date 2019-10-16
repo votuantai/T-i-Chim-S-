@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Set CSS-->
+    <link rel="stylesheet" href="cssimages.css">
+    <title>Booking for your trip </title>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar" style="color: azure;">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-question-circle"></i> Support </a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right" ><i class="fa fa-user-plus"></i> Sign Up</a>
+        <div class="w3-dropdown-hover w3-hide-small w3-right">
+              <button class="w3-button" title="Notifications"><i class="fa fa-user-circle"></i>My Account<i class="fa fa-caret-down"></i></button>     
+              <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button "><i class="fa fa-user"></i>Profile</a>
+                <a href="#" class="w3-bar-item w3-button "><i class="fa fa-sign-out"></i> Log Out</a>
+                <a href="#" class="w3-bar-item w3-button "><i class="fa fa-sign-in"></i> Log In</a>
+              </div>
+        </div>
+      </div>
+      <div id="navSmaill" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <!-- Navbar on small screen-->
+        <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-question-circle"></i> Support </a>
+        <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class='fa fa-user-plus'> Sign Up </i></a>
+        <a href="#" class="w3-button w3-bar-item" onclick="toggleFunction()"><i class="fa fa-user-circle"></i>My Account</a>  
+      </div>
+    </div>
+    <!-- card search-->
+    <header class="w3-display-container w3-content" style="max-width:1500px;">
+      <img class="bgimg-1 w3-image" width="1500" height="800">
+          <div class="w3-display-left w3-padding w3-col l6 m8">
+              <div class="w3-container w3-red">
+                <h2><i class="fa fa-bed w3-margin-right"></i>Hotel Name</h2>
+              </div>
+              <div class="w3-container w3-white w3-padding-16">
+                <form action="/action_page.php" target="_blank">
+                  <div class="w3-row-padding" style="margin:0 -16px;">
+                    <div class="w3-half w3-margin-bottom">
+                      <label><i class="fa fa-calendar-o"></i> Check In</label>
+                      <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+                    </div>
+                    <div class="w3-half">
+                      <label><i class="fa fa-calendar-o"></i> Check Out</label>
+                      <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>
+                    </div>
+                  </div>
+                  <div class="w3-row-padding" style="margin:8px -16px;">
+                    <div class="w3-half w3-margin-bottom">
+                      <label><i class="fa fa-male"></i> Adults</label>
+                      <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+                    </div>
+                    <div class="w3-half">
+                      <label><i class="fa fa-child"></i> Kids</label>
+                    <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+                    </div>
+                  </div>
+                  <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
+                </form>
+            </div>
+          </div>
+    </header>
+    <!-- page content-->
+    <div class="w3-content" style="max-width:1532px;">
+
+        <div class="w3-container w3-margin-top" id="rooms">
+          <h3>Rooms</h3>
+          <p>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p>
+        </div>
+        <div class="nextroom w3-row-padding w3-padding-16">
+            <div class="w3-third w3-margin-bottom">
+              <img src="./images/room_single.jpg" alt="Norway" style="width:100%">
+              <div class="w3-container w3-white">
+                <h3>Single Room</h3>
+                <h6 class="w3-opacity">From $99</h6>
+                <p>Single bed</p>
+                <p>15m<sup>2</sup></p>
+                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+              </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+              <img src="./images/room_double.jpg" alt="Norway" style="width:100%">
+              <div class="w3-container w3-white">
+                <h3>Double Room</h3>
+                <h6 class="w3-opacity">From $149</h6>
+                <p>Queen-size bed</p>
+                <p>25m<sup>2</sup></p>
+                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+              </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+              <img src="./images/room_deluxe.jpg" alt="Norway" style="width:100%">
+              <div class="w3-container w3-white">
+                <h3>Deluxe Room</h3>
+                <h6 class="w3-opacity">From $199</h6>
+                <p>King-size bed</p>
+                <p>40m<sup>2</sup></p>
+                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+              </div>
+            </div>
+          </div>
+          <div class="w3-container">
+              <h3>Our Hotels</h3>
+              <h6>You can find our hotels anywhere in Vietnam:</h6>
+          </div>
+            
+            <div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
+              <div class="w3-half w3-margin-bottom">
+                <div class="w3-display-container">
+                  <img src="./images/ninhbinh.jpg" alt="Ninh Binh" style="width:100%">
+                  <span class="w3-display-bottomleft w3-padding">Ninh Binh</span>
+                </div>
+              </div>
+              <div class="w3-half">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                  <div class="w3-half w3-margin-bottom">
+                    <div class="w3-display-container">
+                      <img src="./images/phongnha.jpg" alt="Phong Nha" style="width:100%">
+                      <span class="w3-display-bottomleft w3-padding">Phong Nha</span>
+                    </div>
+                  </div>
+                  <div class="w3-half w3-margin-bottom">
+                    <div class="w3-display-container">
+                      <img src="./images/hanoi.jpg" alt="Vung Tau" style="width:100%">
+                      <span class="w3-display-bottomleft w3-padding">Ha Noi</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="w3-row-padding" style="margin:0 -16px">
+                  <div class="w3-half w3-margin-bottom">
+                    <div class="w3-display-container">
+                      <img src="./images/dalat.jpg" alt="Dat Lat" style="width:100%">
+                      <span class="w3-display-bottomleft w3-padding">Da Lat</span>
+                    </div>
+                  </div>
+                  <div class="w3-half w3-margin-bottom">
+                    <div class="w3-display-container">
+                      <img src="./images/danang.jpg" alt="Da Nang" style="width:100%">
+                      <span class="w3-display-bottomleft w3-padding">Da Nang</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script>
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+          var navbar = document.getElementById("myNavbar");
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+          } else {
+              navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+          }
+      }
+      function toggleFunction(){
+        var x = document.getElementById('navSmaill');
+        if(x.className.indexOf('w3-show') == -1){
+          x.className += ' w3-show';
+        } else {
+          x.className  = x.className.replace(' w3-show', '');
+        }
+      }
+
+      
+    </script>
+    <script src="main.js"></script>
+  <footer class="footer-center footer-minimal">
+      <div class="content">
+          <div class="container">
+              <div class="row footer-main">
+                  <p class="footer-title">Booking Hotel Web</p>
+                  <p class="footer-address">Address: 4th Floor, 19 Nguyen Huu Tho Street, 7 District, Hochiminh</p>
+                  <div class="tag-row icon-row">
+                      <span><a href="mailto:info@gmail.com">info@gmail.com</a></span>
+                      <span><a href="tel:(035) 3443 516">(035) 3443 516</a></span>
+                  </div>
+            
+                  <hr class="space xs" />
+                  <div class="btn-group navbar-social">
+                      <div class="btn-group social-group">
+                          <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                          <a target="_blank" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                          <a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                          <a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="row copy-row">
+                  <div class="col-md-12 copy-text">
+                      <div class="tag-row">
+                               <span><a href="/Contact">Contact</a></span>
+                               <span><a href="/terms-and-conditions">Terms and conditions</a></span>
+                               <span><a href="https://news.zing.vn/">News</a></span>
+                               <span><a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+T%C3%B4n+%C4%90%E1%BB%A9c+Th%E1%BA%AFng/@10.7326153,106.6970578,17z/data=!3m1!4b1!4m5!3m4!1s0x317528b2747a81a3:0x33c1813055acb613!8m2!3d10.73261!4d106.6992518?hl=vi-VN">Location &amp; map</a></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+  </body>
+  
+</html>
