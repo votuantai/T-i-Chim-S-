@@ -22,7 +22,7 @@ body {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("./images/hotelimage.jpg");
+  background-image: url("../HomePage/images/hotelimage.jpg");
   min-width: 1000px;
 
 }

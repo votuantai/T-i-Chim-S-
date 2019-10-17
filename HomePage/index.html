@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Set CSS-->
-    <link rel="stylesheet" href="cssimages.css">
+    <link rel="stylesheet" href="../HomePage/cssimages.css">
     <title>Booking for your trip </title>
   </head>
   <body>
@@ -47,12 +47,16 @@
     <!-- card search-->
     <header class="w3-display-container w3-content" style="max-width:1500px;">
       <img class="bgimg-1 w3-image" width="1500" height="800">
-          <div class="w3-display-left w3-padding w3-col l6 m8">
+      <!-- Card-->
+          <div class="w3-display-left w3-padding w3-col 16 m8" style="margin-top: 20px;">
+            <!-- Name card-->
               <div class="w3-container w3-red">
                 <h2><i class="fa fa-bed w3-margin-right"></i>Hotel Name</h2>
               </div>
+              <!-- Body card-->
               <div class="w3-container w3-white w3-padding-16">
                 <form action="/action_page.php" target="_blank">
+                  <!-- Input check in & check out-->
                   <div class="w3-row-padding" style="margin:0 -16px;">
                     <div class="w3-half w3-margin-bottom">
                       <label><i class="fa fa-calendar-o"></i> Check In</label>
@@ -63,6 +67,7 @@
                       <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>
                     </div>
                   </div>
+                  <!-- Input check total number of people-->
                   <div class="w3-row-padding" style="margin:8px -16px;">
                     <div class="w3-half w3-margin-bottom">
                       <label><i class="fa fa-male"></i> Adults</label>
@@ -70,10 +75,18 @@
                     </div>
                     <div class="w3-half">
                       <label><i class="fa fa-child"></i> Kids</label>
-                    <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+                      <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
                     </div>
                   </div>
-                  <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
+                  <!-- Input check location-->
+                  <div class="w3-row-padding" style="margin: 8px -16px;">
+                    <div class="w3-half w3-margin-bottom">
+                      <label><i class="fa fa-location"></i> Where</label>
+                      <input class="w3-input w3-border" type="text" placeholder="Anywhere in Vietnam" name="CheckWhere" required>
+                    </div>
+                  </div>
+                  <!-- Button-->
+                  <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search</button>
                 </form>
             </div>
           </div>
@@ -87,7 +100,7 @@
         </div>
         <div class="nextroom w3-row-padding w3-padding-16">
             <div class="w3-third w3-margin-bottom">
-              <img src="./images/room_single.jpg" alt="Norway" style="width:100%">
+              <img src="../HomePage/images/room_single.jpg" alt="Norway" style="width:100%">
               <div class="w3-container w3-white">
                 <h3>Single Room</h3>
                 <h6 class="w3-opacity">From $99</h6>
@@ -98,7 +111,7 @@
               </div>
             </div>
             <div class="w3-third w3-margin-bottom">
-              <img src="./images/room_double.jpg" alt="Norway" style="width:100%">
+              <img src="../HomePage/images/room_double.jpg" alt="Norway" style="width:100%">
               <div class="w3-container w3-white">
                 <h3>Double Room</h3>
                 <h6 class="w3-opacity">From $149</h6>
@@ -109,7 +122,7 @@
               </div>
             </div>
             <div class="w3-third w3-margin-bottom">
-              <img src="./images/room_deluxe.jpg" alt="Norway" style="width:100%">
+              <img src="../HomePage/images/room_deluxe.jpg" alt="Norway" style="width:100%">
               <div class="w3-container w3-white">
                 <h3>Deluxe Room</h3>
                 <h6 class="w3-opacity">From $199</h6>
@@ -128,7 +141,7 @@
             <div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
               <div class="w3-half w3-margin-bottom">
                 <div class="w3-display-container">
-                  <img src="./images/ninhbinh.jpg" alt="Ninh Binh" style="width:100%">
+                  <img src="../HomePage/images/ninhbinh.jpg" alt="Ninh Binh" style="width:100%">
                   <span class="w3-display-bottomleft w3-padding">Ninh Binh</span>
                 </div>
               </div>
@@ -136,13 +149,13 @@
                 <div class="w3-row-padding" style="margin:0 -16px">
                   <div class="w3-half w3-margin-bottom">
                     <div class="w3-display-container">
-                      <img src="./images/phongnha.jpg" alt="Phong Nha" style="width:100%">
+                      <img src="../HomePage/images/phongnha.jpg" alt="Phong Nha" style="width:100%">
                       <span class="w3-display-bottomleft w3-padding">Phong Nha</span>
                     </div>
                   </div>
                   <div class="w3-half w3-margin-bottom">
                     <div class="w3-display-container">
-                      <img src="./images/hanoi.jpg" alt="Vung Tau" style="width:100%">
+                      <img src="../HomePage/images/hanoi.jpg" alt="Ha Noi" style="width:100%">
                       <span class="w3-display-bottomleft w3-padding">Ha Noi</span>
                     </div>
                   </div>
@@ -150,13 +163,13 @@
                 <div class="w3-row-padding" style="margin:0 -16px">
                   <div class="w3-half w3-margin-bottom">
                     <div class="w3-display-container">
-                      <img src="./images/dalat.jpg" alt="Dat Lat" style="width:100%">
+                      <img src="../HomePage/images/dalat.jpg" alt="Dat Lat" style="width:100%">
                       <span class="w3-display-bottomleft w3-padding">Da Lat</span>
                     </div>
                   </div>
                   <div class="w3-half w3-margin-bottom">
                     <div class="w3-display-container">
-                      <img src="./images/danang.jpg" alt="Da Nang" style="width:100%">
+                      <img src="../HomePage/images/danang.jpg" alt="Da Nang" style="width:100%">
                       <span class="w3-display-bottomleft w3-padding">Da Nang</span>
                     </div>
                   </div>
