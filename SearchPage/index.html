@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Set CSS-->
+    <link rel="stylesheet" href="../SearchPage/csspage.css">
+    <title>Booking for you room </title>
+  </head>
+  <body>
+      <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar" style="color: azure;">
+          <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+          </a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+          <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-question-circle"></i> Support </a>
+          <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right" data-toggle="modal" data-targer="#exampleModal" ><i class="fa fa-user-plus"></i> Sign Up</a>
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+          <div class="w3-dropdown-hover w3-hide-small w3-right">
+                <button class="w3-button" title="Notifications"><i class="fa fa-user-circle"></i>My Account<i class="fa fa-caret-down"></i></button>     
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                  <a href="#" class="w3-bar-item w3-button "><i class="fa fa-user"></i>Profile</a>
+                  <a href="#" class="w3-bar-item w3-button "><i class="fa fa-sign-out"></i> Log Out</a>
+                  <a href="#" class="w3-bar-item w3-button "><i class="fa fa-sign-in"></i> Log In</a>
+                </div>
+          </div>
+        </div>
+        <div id="navSmaill" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+          <!-- Navbar on small screen-->
+          <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-question-circle"></i> Support </a>
+          <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class='fa fa-user-plus'> Sign Up </i></a>
+          <a href="#" class="w3-button w3-bar-item" onclick="toggleFunction()"><i class="fa fa-user-circle"></i>My Account</a>  
+        </div>
+      </div>
+      <!-- card search-->
+      <header class="w3-display-container w3-content" style="max-width:1500px;">
+        <img class="bgimg-1 w3-image" width="1500" height="800">
+        <!-- Card-->
+            <div class="w3-display-left w3-padding w3-col 16 m8" style="margin-top: 20px;">
+              <!-- Name card-->
+                <div class="w3-container w3-red">
+                  <h2><i class="fa fa-bed w3-margin-right"></i>Hotel Name</h2>
+                </div>
+                <!-- Body card-->
+                <div class="w3-container w3-white w3-padding-16">
+                  <form action="/action_page.php" target="_blank">
+                    <!-- Input check in & check out-->
+                    <div class="w3-row-padding" style="margin:0 -16px;">
+                      <div class="w3-half w3-margin-bottom">
+                        <label><i class="fa fa-calendar-o"></i> Check In</label>
+                        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+                      </div>
+                      <div class="w3-half">
+                        <label><i class="fa fa-calendar-o"></i> Check Out</label>
+                        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>
+                      </div>
+                    </div>
+                    <!-- Input check total number of people-->
+                    <div class="w3-row-padding" style="margin:8px -16px;">
+                      <div class="w3-half w3-margin-bottom">
+                        <label><i class="fa fa-male"></i> Adults</label>
+                        <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+                      </div>
+                      <div class="w3-half">
+                        <label><i class="fa fa-child"></i> Kids</label>
+                        <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+                      </div>
+                    </div>
+                    <!-- Input check location-->
+                    <div class="w3-row-padding" style="margin: 8px -16px;">
+                      <div class="w3-half w3-margin-bottom">
+                        <label><i class="fa fa-location"></i> Where</label>
+                        <input class="w3-input w3-border" type="text" placeholder="Anywhere in Vietnam" name="CheckWhere" required>
+                      </div>
+                    </div>
+                    <!-- Button-->
+                    <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search</button>
+                  </form>
+              </div>
+            </div>
+      </header>
+
+    <!--- Content Page-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script>
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+          var navbar = document.getElementById("myNavbar");
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+          } else {
+              navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+          }
+      }
+      function toggleFunction(){
+        var x = document.getElementById('navSmaill');
+        if(x.className.indexOf('w3-show') == -1){
+          x.className += ' w3-show';
+        } else {
+          x.className  = x.className.replace(' w3-show', '');
+        }
+      }
+
+      
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
